@@ -20,7 +20,7 @@
               peach= "#fba8c4",
               teal= "#4fd1c5"
               }
-          }
+          },transparent_background=true,
         }
       )
     vim.cmd.colorscheme "catppuccin"

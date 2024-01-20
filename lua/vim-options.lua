@@ -7,3 +7,4 @@ vim.cmd("set number")
 vim.g.mapleader = " "
 vim.keymap.set("n","<leader>wv",":vsplit<CR>",{})
 vim.keymap.set("n","<leader>ww","<C-w>w",{})
+vim.diagnostic.config({update_in_insert=true})
