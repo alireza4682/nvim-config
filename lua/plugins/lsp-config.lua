@@ -13,13 +13,16 @@ return {
 			})
 		end,
 	},
+	{ "folke/neodev.nvim", opts = {} },
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
+			require("neodev").setup({})
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
+				settings = { lua = { completion = { callSnippet = "Replace" } } },
 			})
 			lspconfig.tsserver.setup({
 				capabilities = capabilities,
