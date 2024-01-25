@@ -28,6 +28,14 @@ return {
 				capabilities = capabilities,
 			})
 
+       vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+         vim.lsp.handlers.hover, {
+           -- Use a sharp border with `FloatBorder` highlights
+           border = "single",
+           -- add the title in hover float window
+           title = "hover"
+         }
+       )
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
