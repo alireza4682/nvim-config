@@ -33,7 +33,7 @@ return {
            -- Use a sharp border with `FloatBorder` highlights
            border = "single",
            -- add the title in hover float window
-           title = "hover"
+           title = ""
          }
        )
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
